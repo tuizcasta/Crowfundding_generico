@@ -1,0 +1,603 @@
+html {
+    font-size: 62.5%; /*62.5%= 10px*/
+    box-sizing: border-box;
+    
+    
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    
+}
+
+
+/*global*/
+.contenedor{
+    width: 95%;
+    max-width: 120rem; /*tamaño contenedor fondo*/
+    margin: 0 auto 0 auto; /*poner margenes al contenido del header principal*/
+}
+
+
+
+h1{
+    font-size: 3.8rem;
+
+}
+
+h2{
+    font-size: 3.4rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+h4{
+    font-size: 2.6rem;
+}
+
+ /*utilidades*/
+.seccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.adelgazartexto300{
+    font-weight: 300;
+}
+
+.centrartexto{
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+.extenderboton{
+    display: block!important;
+}
+
+.contenido-centrado {
+    max-width: 800px;
+}
+
+.tamanioletra {
+    font-size: 2.5rem;
+}
+
+.centrar{
+    justify-content: center;
+}
+
+/*botones*/
+
+.boton{
+    color: white;
+    font-weight: 300;
+    font-size: 1.8rem;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    margin-top: 2.5rem;
+    display: inline-block;
+    text-align: center;    
+    border: none;
+    display: block;
+    flex: 0 0 100%;
+}
+
+@media (min-width: 768px){
+    .boton{
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+
+
+.boton-amarillo{
+    background-color: rgb(87, 112, 223);
+}
+
+.boton-verde{
+    background-color: rgb(46, 64, 68);
+}
+
+/*pagina principal*/
+/*header de la pagina principal*/
+.site-header.inicio{
+    background:url(../img/header3.jpg); /*importar fondo*/
+    background-size: cover; /*cubrir todo el espacio del header con la imagen*/
+    background-position: center center;/*posicionar el fondo del header desde el centro*/
+    height: 100vh; /*detectar el tamaño de la pantalla*/
+    min-height: 60rem; /*imponer un minimo tamaño para el fondo del header principal*/
+
+}
+
+.site-header{
+    background-color: rgb(250, 151, 151);
+    padding: 1rem 0 3rem 0;
+    padding-top: 0;
+}
+
+.contenido-header{
+    height: 100% ;   /*separacion de texto y logo*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    -webkit-text-fill-color: rgb(0, 1, 3);
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+ 
+}  
+
+@media (min-width: 768px){
+    .contenido-header{
+        text-align: justify;
+        -webkit-text-fill-color: rgb(0, 1, 3);
+        -webkit-text-stroke: 1px rgb(255, 255, 255);
+        
+    } 
+
+}
+
+
+.contenido-header h1 {
+    color: rgb(251, 248, 255);  /*modificacion de texto del header*/
+    font-family: 'Lobster', cursive;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+    line-height: 5rem;
+    font-size: 10rem;
+}
+
+
+.barra {
+
+    padding-top: 3rem; /*padding top sirve para separasr el contenido de la margen superior*/
+    
+}
+
+.mobile-menu img{
+    width: 5rem;
+}
+
+@media (min-width: 768px){
+    .mobile-menu{
+        display: none;
+    }
+
+}
+
+.navegacion{
+    display: none;
+}
+
+@media (min-width: 768px){
+    .navegacion {
+        display: block;
+    }
+}
+
+.navegacion:target{
+    display: block;
+}
+
+
+
+@media (min-width: 768px){
+    .barra {
+        display: flex; /*para posicionar contenido*/
+        justify-content: space-between; /*justi9ficar el contenido*/
+        
+    }
+    
+   
+}
+
+
+.navegacion a {
+    color: rgb(255, 241, 241);
+    text-decoration: none; /*para quitar las lineas bajo los enlaces*/
+    font-size: 1.8rem; /*tamaño de la fuente*/
+    display: block;
+}
+
+@media (min-width: 768px){
+    .navegacion a{
+        display: inline-block;
+        margin-right: 2rem; /*tener un poco de separacion entre los enlaces*/
+
+    }
+
+    .navegacion a:last-of-type {  /*para editar el ultimo elemento del menu de navegacion*/ 
+        margin: 0;
+    }
+    
+}
+
+
+
+.navegacion a:hover{
+    color: tomato;  /*damos color a todos los elementos del menu de navegacion*/ 
+}
+
+
+/*sobre nosotros*/
+
+@media (min-width: 768px){
+    .sobrenosotros {
+        display: flex;
+        justify-content: space-between; 
+       
+    }
+
+}
+
+
+
+.icono h3{
+    text-transform: uppercase;
+}
+
+.icono{
+    flex-basis: calc(33.3% - 1rem);
+
+}
+
+@media (min-width: 768px){
+    .icono{
+        flex-basis: calc(33.3% - 1rem);
+    
+    }
+}
+
+
+/*anuncios*/  /*dividimos por partes iguales los elementos*/
+@media (min-width: 768px) {
+    .contenedor-anuncios{
+        display: flex;
+        justify-content: space-between; 
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .anuncio{
+        flex: 0 0 calc(33.3% - 1rem);
+    
+    }
+
+}
+
+.anuncio{
+    flex: 0 0 calc(33.3% - 1rem); /*para resumir flex grow que es la base flex shrink para dar tamaños sin encojer y flex basis que es la base*/
+    border: 0.1rem rgb(85, 79, 79) solid;  /*borde de los anuncios*/
+    background-color: #f5f5f5;
+    margin-bottom: 2rem;
+}
+
+.contenido-anuncio{
+    padding: 2rem; /*margenes al contenido de los anuncios*/
+}
+
+.contenido-anuncio h3, .contenido-anuncio p {
+    margin: 0;
+}
+
+.precio {
+    color: green;
+    font-weight: 700;
+}
+
+.vertodas{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.iconocarac{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+    max-width: 500px;
+}
+
+
+
+/*contacto home*/
+
+.encuentra {
+    background-image: url(../img/encuentra.jpg);
+    height: 40rem;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.contenidoc{
+    flex: 0 0 95%;  /*asignar espacio equitativamente*/
+    color: white;
+    background-color: #a39480b6;
+    
+}
+
+.contenidoc p{
+    font-size: 1.8rem;
+}
+
+/*parte inferior*/
+
+@media (min-width: 760px){
+    .seccion-inferior{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .seccion-inferior .blog{
+        flex-basis: 60%;
+    }
+
+    .seccion-inferior .testimoniales{
+        flex-basis: calc(40% - 2rem);
+    }
+
+}
+
+@media (min-width: 768px){
+    .entrada{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5rem;
+        
+    }
+
+}
+
+.entrada:last-of-type {
+    margin-bottom: 0;
+}
+
+
+@media (min-width: 760px){
+.entrada .imagen{
+    flex-basis: 40%;
+
+}
+}
+
+.entrada .textoentrada{
+    flex-basis: calc(60% - 3rem);
+}
+
+.textoentrada h3 {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.textoentrada a{
+    color: black;
+    text-decoration: none;
+}
+
+.textoentrada h4::after {
+    content: '' ;
+    display: block;
+    width: 15rem;
+    height: 0.5rem;
+    background-color: green;
+    margin-top: 1rem;
+
+}
+
+.entrada em{
+    color: green;
+}
+
+.texto-entrada em{
+    color: green;
+
+}
+
+.texto-entrada p {
+    line-height: 3.1rem;
+}
+
+/*testimoniales*/
+
+.testimoniales {
+    background-color: rgb(58, 86, 179);
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: white;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.testimoniales p {
+    text-align: right;
+}
+
+.testimoniales blockquote::before{  /*comilla -absolute en el hijo relative en el padre*/
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    position: absolute;
+    left: -2rem;
+}
+
+.testimoniales blockquote {
+    position: relative;
+    padding-left: 5rem;
+    font-weight: 300;
+}
+
+/*footer*/
+
+.site-footer{
+    background-color: #333333;
+    margin-bottom: 0;
+    text-align: center;
+   
+}
+
+.copyright{
+    margin: 0;
+    color: white;
+}
+
+@media (min-width: 768px){
+.contenedor-footer{
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    
+}
+}
+
+.navegacion2 {
+    color: white;
+}
+
+
+.site-footer2{
+    background-color: #333333;
+    margin-bottom: 0;
+    text-align: center;
+   
+}
+
+.copyright2{
+    margin: 0;
+    color: white;
+}
+
+@media (min-width: 768px){
+.contenedor-footer2{
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    
+}
+}
+
+.navegacion2 {
+    color: white;
+}
+
+
+/*Nosotros*/
+
+@media (min-width: 768px){
+.contenido-nosotros {
+    display: grid; /*para posicionar*/
+    grid-template-columns: repeat(2, 1fr); /*para separar en dos columnas*/
+    grid-column-gap: 2rem; /*para agregar separacion entre columnas*/
+}
+
+}
+
+.texto-nosotros blockquote{
+    font-weight: 900;
+    margin: 0;
+    font-size: 2rem;
+    padding: 1rem 0 3rem 0;
+}
+
+.contenedor-an{
+    margin-bottom: 5rem;
+}
+
+
+/*anuncio*/
+.resumen-propiedad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+/*Contacto*/
+
+.contacto p{
+    font-size: 1.8rem;
+    color: #5a5a5a;
+    margin: 2rem 0 0 0;
+
+}
+
+label{
+
+    display: block; /*hace que tomen todo el espacio disponible*/
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+input:not([type="submit"]),
+textarea,
+select{
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 2rem;
+}
+
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type="radio"], 
+[type="checkbox"]{
+    max-width: auto;
+    margin: 0;
+}
+
+
+textarea{
+    height: 15rem;
+    max-width: 90%;
+}
+
+legend {
+    font-size: 2.2rem;
+    color: #5a5a5a;
+}
+
+.forma-contacto {
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tipo-contacto {
+    max-width: 60rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+}
+
+ 
+
